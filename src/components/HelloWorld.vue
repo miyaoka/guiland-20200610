@@ -11,7 +11,12 @@
 
     <!-- eslint-disable no-irregular-whitespace -->
     <div class="textList">
-      <section v-for="(text, i) in textList" ref="section" :key="i">
+      <section
+        v-for="({ text, color }, i) in textList"
+        ref="section"
+        :key="i"
+        :style="{ color }"
+      >
         {{ text }}
       </section>
     </div>
@@ -49,11 +54,18 @@ function censorshipText(text: string, color: string): string {
     return acc + replaced
   }, '')
 }
-
+function getRandomColor(): stiring {
+  return '#' + (((1 << 24) * Math.random()) | 0).toString(16)
+}
 export default Vue.extend({
   data() {
     return {
-      textList,
+      textList: textList.map((text) => {
+        return {
+          text,
+          color: getRandomColor(),
+        }
+      }),
     }
   },
   mounted() {
@@ -80,6 +92,11 @@ export default Vue.extend({
 }
 section {
   writing-mode: vertical-rl;
+  text-align: start;
+  padding: 10px;
+  font-family: 'Noto Serif JP', serif;
+  line-height: 1.7;
+  font-size: 20px;
   &:hover {
     .censor {
       background-position-y: 100%;
