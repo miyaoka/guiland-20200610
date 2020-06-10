@@ -49,7 +49,7 @@ function censorshipText(text: string, color: string): string {
     const replaced = line.replace(
       new RegExp(`(.{${start}})(.{${censorLength}})`),
       (_match, p1, p2) => {
-        return `${p1}<span class="censor" style="background-image: linear-gradient(90deg, ${color} 50%, transparent 0)">${p2}</span>`
+        return `${p1}<span class="censor" style="background-image: linear-gradient(180deg, ${color} 50%, transparent 0)">${p2}</span>`
       }
     )
 
@@ -77,16 +77,18 @@ export default Vue.extend({
 <style lang="scss">
 .censor {
   // display: inline-block;
-  background-image: linear-gradient(90deg, #000 50%, transparent 0);
-  background-position: 100%;
-  background-size: 200% auto;
+  // background-image: linear-gradient(180deg, #000 50%, transparent 0);
+  background-size: auto 200%;
   transition: all 0.4s cubic-bezier(0.55, 0, 0.1, 1);
-  background-position: 0;
+  background-position-y: 0px;
+  background-position-x: 0;
 }
 section {
+  writing-mode: vertical-rl;
   &:hover {
     .censor {
-      background-position: 100%;
+      background-position-y: 100%;
+      background-position-x: 0;
     }
   }
 }
