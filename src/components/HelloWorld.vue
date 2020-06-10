@@ -54,7 +54,7 @@ function censorshipText(text: string, color: string): string {
     return acc + replaced
   }, '')
 }
-function getRandomColor(): stiring {
+function getRandomColor(): string {
   return '#' + (((1 << 24) * Math.random()) | 0).toString(16)
 }
 export default Vue.extend({
