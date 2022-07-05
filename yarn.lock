@@ -795,6 +795,11 @@
   resolved "https://registry.yarnpkg.com/@vue/cli-plugin-vuex/-/cli-plugin-vuex-4.4.1.tgz#98d18fc5d36fa6e0d1fc2ecaeea37aa965564f19"
   integrity sha512-FtOFsDP0qznwVaCz0BZmTzUm5vhHSJzX2/XD3L5dLTkrNxyDEbZmbKoX0n1OzBcQwZC7dkJZP2tdoCQx0mX//g==
 
+"@vue/cli-plugin-vuex@^5.0.7":
+  version "5.0.7"
+  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-vuex/-/cli-plugin-vuex-5.0.7.tgz#0535cc77c3c71e7db6d89a4f03fa47c7a9408428"
+  integrity sha512-X8RbsUDE/4K32LGd91RgqDnjOYxVQlLU0J40dtHJJv/z3IwFD5vTZBT8a8s7bf3KD3YvYPisZjymUJnMObEhEg==
+
 "@vue/cli-service@^4.4.1":
   version "4.4.1"
   resolved "https://registry.yarnpkg.com/@vue/cli-service/-/cli-service-4.4.1.tgz#b26a435d8c953bc7efaf7b784c9835c1415bcf1c"
